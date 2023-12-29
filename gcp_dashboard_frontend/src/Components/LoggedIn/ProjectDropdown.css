@@ -1,0 +1,21 @@
+/* ProjectDropdown.css */
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .select-project, .select-zone {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .project-option, .zone-option {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  

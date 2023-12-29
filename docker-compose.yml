@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports: 
+      - "8000:8000"
+    volumes:
+      - ./gcp_easy_dashboard:/gcp_easy_dashboard
+    command: bash -c "python manage.py runserver 0.0.0.0:8000"
+  web:
+    build: ./gcp_dashboard_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./gcp_dashboard_frontend:/gcp_dashboard_frontend        

@@ -1,0 +1,109 @@
+/* Updated styles for a responsive layout */
+.home {
+  padding: 10px;
+  background-color: rgb(170, 140, 101);
+  min-width: 100%;
+  width: fit-content;
+  max-width: fit-content;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (max-width: 500px) {
+  .home {
+    margin-top: 86px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home {
+    margin-top: 80px;
+  }
+}
+
+/* Responsive layout for wider screens */
+@media screen and (min-width: 500px) {
+  .home {
+    margin-top: 80px;
+  }
+}
+
+/* Sidenav styles */
+.sidenav-container {
+  position: fixed;
+  top: 80px; /* Adjust for the Navbar height */
+  left: 0;
+  height: calc(100vh - 80px);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s;
+  z-index: 99;
+}
+.intances-container{
+  width: 80vw;
+}
+
+.dropdown-instance-container {
+  position: fixed;
+  width: auto; /* Adjust width automatically based on content */
+  padding: 1rem;
+  flex-grow: 1;
+  left: 130px; /* Adjust for sidenav width */
+  max-width: 100%; /* Set a max-width to limit the width */
+  overflow: hidden; /* Add overflow for content that exceeds the width */
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .dropdown-instance-container {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .dropdown-instance-container {
+    width: 70vw;
+  }
+}
+
+
+
+
+
+/* Dropdown search container */
+.dropdown-search-container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+/* Button styles */
+.dropdown-search-container button {
+  margin-left: 10px;
+  background-color: #2d4966;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.dropdown-search-container button:hover {
+  background-color: #435f7f;
+}
+
+/* Select styles */
+.dropdown-search-container select {
+  padding: 10px;
+  border-radius: 5px;
+}

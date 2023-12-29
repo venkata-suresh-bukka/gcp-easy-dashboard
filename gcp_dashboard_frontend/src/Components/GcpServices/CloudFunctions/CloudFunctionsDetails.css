@@ -1,0 +1,32 @@
+.cloud-functions-card {
+    background-color: rgb(242, 241, 241);
+    width: 20vw;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    padding: 8px;
+    cursor: pointer;
+    transform: scale(1); /* Initial scale */
+  }
+  
+  .cloud-functions-card:hover {
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Scale up slightly on hover */
+  }
+  
+  .cloud-functions-card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cloud-functions-card-container > div {
+    margin-right: 10px;
+  }
+  .function-data-key{
+    font-weight: 800;
+    font-size: 15px;
+  }
+  .function-data-value{
+    font-size: 15px;
+    margin-bottom: 5px;
+  }

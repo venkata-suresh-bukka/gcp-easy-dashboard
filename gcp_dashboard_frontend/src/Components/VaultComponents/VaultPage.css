@@ -1,0 +1,169 @@
+/* Add this CSS to your stylesheets to style the list component */
+
+.vault-page-container {
+  margin-top: 6%;
+  padding: 10px;
+  background-color: rgb(170, 140, 101);
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .vault-page-container {
+    margin-top: 86px; /* Adjust for the Navbar height */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .vault-page-container {
+    margin-top: 80px; /* Adjust for the Navbar height */
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .vault-page-container {
+    margin-top: 80px; /* Adjust for the Navbar height */
+  }
+}
+
+.user-projects-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(206, 214, 219);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px; 
+  width: 50vw;
+}
+
+.user-projects-card.hidden {
+  display: none;
+}
+  
+.add-vault-secret {
+  color: green;
+  transition: color 0.3s;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+  margin-top: 10px; /* Added margin for separation */
+}
+
+.add-vault-secret:hover {
+  color: darkgreen;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+  
+  .status-message {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .status-message.success {
+    color: green;
+  }
+  
+  .status-message.error {
+    color: red;
+  }
+  
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 40px;
+    width: 90%; /* Updated width for responsiveness */
+    max-height: 50vh; /* Updated max-height for responsiveness */
+    overflow-y: auto; /* Added scroll for overflow */
+  }
+  
+  .project-item {
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff; /* Added background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box shadow */
+  }
+
+.delete-icon {
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 7px;
+  margin-left: 20px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.delete-icon:hover {
+  color: darkred;
+  transform: scale(1.1);
+}
+
+  .project-name.disabled {
+    background-color: #f4aaaa; /* Light red */
+  }
+   
+  .vault-username.disabled {
+    background-color: #f4aaaa; /* Light red */
+  }
+  
+  .project-details {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .vault-username {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: Arial;
+    background-color: #c1c9c5;
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 10vw;
+    padding-top: 8px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+  
+  .project-name {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: Arial;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #c1c9c5;
+    width: 20vw;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /*----------------------refresh icon styles---------------*/
+  .refresh-icon {
+    color: #007BFF;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+    margin-left: 80%;
+  }
+  
+  .refresh-icon:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+  }

@@ -1,0 +1,80 @@
+.cloud-run-data-page-container {
+    margin-top: 80px;
+    height: fit-content;
+    min-height: 90vh;
+    background-color: rgb(170, 140, 101);
+    padding: 10px;
+    text-align: center;
+  }
+  .cloud-run-navigate-btn-heading-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 50%;
+    margin-left: 21%;
+  }
+  .cloud-run-data-page-heading {
+    color: #242020;
+    font-size: 20px;
+    margin-top: 12px;
+    margin-left: 20px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+    border-radius: 10px;
+  }
+  
+  .cloud-run-details-table {
+    width: 60%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .cloud-run-details-table th,
+  .cloud-run-details-table td {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #5c5c88;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .pagination button:hover {
+    background-color: #42426f; 
+  }
+  .pagination span {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #ddd;
+    color: #333;
+    border-radius: 5px;
+  }
+  .navigate-cloud-run-btn{
+    background-color: #5c5c88;
+    margin-top: 10px;
+    height: 7vh;
+    width: 8vw;
+    transition: background-color 0.3s;
+  }
+  .navigate-cloud-run-btn:hover {
+    background-color: #42426f; 
+  }
+ 

@@ -1,0 +1,78 @@
+.instance-data-page-container {
+    margin-top: 80px;
+    height: fit-content;
+    min-height: 90vh;
+    background-color: rgb(170, 140, 101);
+    padding: 10px;
+    text-align: center;
+  }
+  .instance-data-page-heading{
+    color: #242020;
+    font-size: 20px;
+    margin-top: 13px;
+    margin-left: 20px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+    border-radius: 10px;
+  }
+ 
+  .instance-details-table {
+    width: 60%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .instance-details-table th,
+  .instance-details-table td {
+    text-align: left;
+    padding: 10px;
+  }
+  
+ 
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #5c5c88;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination span {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #ddd;
+    color: #333;
+    border-radius: 5px;
+  }
+  
+  .instance-navigate-compute-engine-btn{
+    background-color: #5c5c88;
+    margin-top: 10px;
+    height: 7vh;
+    width: 8vw;
+    transition: background-color 0.3s;
+  }
+  .instance-navigate-compute-engine-btn:hover {
+    background-color: #42426f; 
+  }
+  .instances-navigate-btn-heading-container{
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    margin-left: 21%;
+  }
