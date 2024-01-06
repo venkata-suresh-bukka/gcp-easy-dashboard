@@ -1,32 +1,28 @@
 FROM nginx:alpine
-RUN apk update
-# ARG DB_USER
-# ARG DB_PASSWORD
-# ARG DB_HOST
-# ARG DB_PORT
+
+RUN apk update \
+    && apk add --virtual build-deps gcc python3-dev musl-dev \
+    && apk add --no-cache mariadb-dev
+
 RUN apk update && \
-    apk --no-cache add python3-dev py3-pip && \
-    pip3 install --upgrade pip && \
-    pip3 install --no-cache --upgrade pip setuptools 
-    
-RUN python3 -m ensurepip
+    apk --no-cache add python3 py3-pip mariadb-dev build-base && \
+    pip install --upgrade pip && \
+    pip install --no-cache --upgrade pip setuptools
 
 COPY default.conf /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
+COPY certs/gcpeasy.pem /etc/nginx/gcpeasy.pem
+COPY certs/gcpeasy.key /etc/nginx/gcpeasy.key
+
 WORKDIR /opt/app
 COPY . .
+
 RUN pip install gunicorn
 RUN pip install -r requirements.txt
-# ENV DB_USER=$DB_USER
-# ENV DB_PASSWORD=$DB_PASSWORD
-# ENV DB_HOST=$DB_HOST
-# ENV DB_PORT=$DB_PORT
-
-#aws access
-# ENV AWS_ACCESS_KEY_ID=$USER
-# ENV AWS_SECRET_ACCESS_KEY=$PASSWORD
+RUN pip install --upgrade requests
+RUN pip install --upgrade hvac
+RUN apk del build-deps
 
 EXPOSE 8000
-ENTRYPOINT ["sh", "/opt/app/backend_startup/start.sh"]  
-
+ENTRYPOINT ["sh", "/opt/app/backend_startup/start.sh"]
